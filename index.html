@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- table -->
+    <div class="container">
+        <div class="py-3">
+            <h1>CRUD Database</h1>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Hobby</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableList">
+            </tbody>
+        </table>
+        <button onclick="downloadBtn()" class="btn btn-primary">Download CSV</button>
+        <button data-toggle="modal" data-bs-toggle="modal" data-bs-target="#myModal" class="btn btn-success">Add Item</button>
+    </div>
+    <!-- Popup Inputs -->`
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">CRUD</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert"></div>
+                    <div class="mb-3">
+                        <label for="fName" class="col-form-label">First Name</label>
+                        <input type="text" class="form-control" id="fName" placeholder="Enter Your First Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lName" class="col-form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lName" placeholder="Enter Your Last Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="col-form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Your Email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="col-form-label">Phone</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Enter Your Phone Number">
+                    </div>
+                    <div class="mb-3 ">
+                        <label for="address" class="col-form-label">Location</label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter Your Location">
+                    </div>
+                    <div class="mb-3">
+                        <label for="hobby" class="col-form-label">Hobby</label>
+                        <input type="text" class="form-control" id="hobby" placeholder="Enter Your Hobby">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="add" class="btn btn-primary ">Add Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main js -->
+    <script src="js/script.js "></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+</body>
+
+</html>
